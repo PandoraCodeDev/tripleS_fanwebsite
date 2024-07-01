@@ -1,0 +1,645 @@
+@font-face {
+  font-family: Pretendard;
+  src: url(../font/Pretendard-Regular.woff2);
+}
+:root {
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+  --purple-color: #b400fe;
+  --gray-color: #c5c7c8;
+  --grey-color: #777777;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========================== Global CSS =========================*/
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Pretendard;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.text-primary {
+  color: var(--primary-color);
+}
+.text-secondary {
+  color: var(--secondary-color);
+}
+h2 {
+  font-size: 48px;
+  font-weight: bold;
+}
+h3 {
+  font-size: clamp(1.5rem, 0.8182rem + 3.4091vw, 3rem);
+  font-weight: bold;
+}
+h4 {
+  font-size: 24px;
+  font-weight: bold;
+}
+h5 {
+  font-size: 20px;
+  font-weight: bold;
+}
+h6 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.disabled__scroll {
+  overflow: hidden;
+}
+.layout__content {
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 100%;
+  height: auto;
+}
+.sub__header {
+  animation: AnimationFadeToTop 0.5s;
+  margin-bottom: 20px;
+}
+/* ========================== Hero Page ==========================*/
+.hero__page {
+  width: 100%;
+  height: 100dvh;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero__content {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero__header {
+  font-family: Helvetica, sans-serif;
+  font-size: clamp(3rem, 2.3182rem + 3.4091vw, 4.5rem);
+  font-weight: bold;
+  animation: AnimationFade 1.5s;
+}
+.hero__subtitle {
+  font-size: clamp(1.125rem, 0.2727rem + 4.2614vw, 1.5rem);
+  font-weight: 400;
+  animation: AnimationFade 3.5s;
+}
+
+/* ========================== Member Page ========================*/
+.member__page {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.grid__content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 8px;
+}
+.grid__item {
+  width: 100%;
+}
+
+/* ========================== Discography Page ===================*/
+.discography__page {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* .album {
+  max-width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 5) - 12px);
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: 0;
+  gap: 16px;
+}
+.album::-webkit-scrollbar {
+  display: none;
+}
+.album__name {
+  font-size: clamp(0.5rem, 0.7727rem + 1.1364vw, 1rem);
+}
+.album.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.album.dragging .album__list {
+  cursor: grab;
+  user-select: none;
+}
+.album__list {
+  max-width: 200px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  animation: AnimationFadeToTop 1s;
+  gap: 8px;
+}
+.album__cover {
+  height: 200px;
+}
+.cover__image {
+  -webkit-user-drag: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+} */
+.slider__carousel {
+  max-width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 1));
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: 0;
+  gap: 24px;
+}
+.slider__carousel::-webkit-scrollbar {
+  display: none;
+}
+.slider__carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.slider__carousel.dragging .slider {
+  cursor: grab;
+  user-select: none;
+}
+.slider {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  background-color: var(--grey-color);
+  margin-bottom: 20px;
+  padding: 24px;
+  border-radius: 10px;
+  gap: 24px;
+  scroll-snap-align: start;
+}
+/* .slider__button {
+  position: fixed;
+  top: 50%;
+  width: 64px;
+  height: 64px;
+  background-color: var(--gray-color);
+}
+.button-left {
+  left: 0;
+}
+.button-right {
+  right: 0;
+} */
+.slider__image {
+  max-width: 100%;
+  /* height: 100%; */
+  flex: 1 0 auto;
+}
+.slider__image img {
+  width: 100%;
+  height: 100%;
+  -webkit-user-drag: none;
+}
+.slider__content {
+  width: 100%;
+}
+.slider__header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.slider__content h4 {
+  font-size: clamp(0.5rem, 0.7727rem + 1.1364vw, 1.75rem);
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+}
+.slider__content span {
+  font-size: clamp(0.5rem, 0.7727rem + 1.1364vw, 1rem);
+  margin-bottom: 10px;
+  display: inline-block;
+  color: var(--secondary-color);
+}
+.slider__body {
+  margin-top: 30px;
+  height: 300px;
+  overflow: hidden;
+}
+.slider__body h5 {
+  font-size: clamp(0.5rem, 0.7727rem + 1.1364vw, 1rem);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+}
+.divider {
+  width: 100%;
+  border-top: 1px solid var(--secondary-color);
+}
+.tracklist {
+  height: 95%;
+  list-style: none;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+}
+.tracklist::-webkit-scrollbar {
+  background-color: var(--secondary-color);
+  width: 16px;
+}
+.tracklist::-webkit-scrollbar-track {
+  background-color: var(--grey-color);
+}
+.tracklist::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
+  border-radius: 16px;
+  border: 5px solid var(--grey-color);
+}
+.trackname {
+  padding: 16px 0;
+  font-size: clamp(0.5rem, 0.7727rem + 1.1364vw, 1rem);
+  font-weight: 500;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+  color: var(--secondary-color);
+}
+.trackname:last-child {
+  border: 0;
+}
+/* ========================== Components ======================== */
+/* ------------------------- Modal Component ---------------------*/
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+}
+.modal__backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal__dialog {
+  width: 980px;
+  height: 680px;
+  background-color: var(--secondary-color);
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+}
+.modal__button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+.button__close {
+  display: inline-block;
+  background-image: url(../img/close.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+}
+.modal__body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.modal__content {
+  width: 100%;
+}
+.content-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  padding: 25px;
+}
+.content__image {
+  height: 100%;
+  object-fit: cover;
+}
+.content-right {
+  background-color: var(--purple-color);
+  padding: 60px 25px 25px 25px;
+  color: var(--secondary-color);
+}
+.content__info {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--secondary-color);
+  margin-bottom: 20px;
+  gap: 4px;
+}
+.content__header {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.content__text {
+  font-size: clamp(1rem, 0.7727rem + 1.1364vw, 1.5rem);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.content__signature {
+  max-width: clamp(12.5rem, 7.102vw + 11.08rem, 15.625rem);
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+/* ------------------------- Card Component ---------------------*/
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  animation: AnimationFadeToTop 1s;
+}
+.card__img {
+  width: 100%;
+  height: 100%;
+}
+.card__body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.2s ease;
+  user-select: none;
+}
+.card__body img {
+  width: clamp(4rem, 7.494vw + 3.204rem, 8rem);
+}
+.card__header {
+  margin-bottom: 8px;
+}
+.card__subtitle {
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+.card__body:hover {
+  opacity: 1;
+}
+/* --------------- Floating Button Group Component ---------------------*/
+.floating__group {
+  position: fixed;
+  bottom: 30px;
+}
+.float-left {
+  left: 3%;
+}
+.floating__sns {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+}
+
+.sns__contact {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+}
+.sns__link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sns__facebook {
+  background-image: url("../img/sns_facebook_b.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+}
+.sns__ig {
+  background-image: url("../img/sns_instagram_b.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+}
+.sns__x {
+  background-image: url("../img/sns_x_b.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+}
+.sns__youtube {
+  background-image: url("../img/sns_youtube_b.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+}
+.sns__tiktok {
+  background-image: url("../img/sns_tiktok_b.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+}
+/* --------------- Floating Button Component ---------------------*/
+.floating__button {
+  position: fixed;
+  bottom: 30px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  background-color: var(--purple-color);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+.floating__button.float-right {
+  right: 3%;
+}
+.button__top {
+  display: inline-block;
+  background-image: url(../img/arrow_up.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 48px;
+  height: 48px;
+}
+/* ----------------------- Filter Component ---------------------*/
+.filter {
+  display: flex;
+  justify-content: end;
+  position: relative;
+  margin-bottom: 20px;
+}
+.filter__button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  outline: none;
+  padding: 8px 24px;
+  cursor: pointer;
+  font-family: Pretendard;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: none;
+  font-size: 16px;
+  border: none;
+}
+.filter__button::before {
+  content: "";
+  background-image: url(../img/filter.png);
+  background-position: center center;
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+}
+.filter .filter__dropdown {
+  width: 250px;
+  height: auto;
+  overflow-y: auto;
+  background-color: var(--secondary-color);
+  position: absolute;
+  top: 100%;
+  right: 0;
+  list-style: none;
+  border: 1px solid var(--gray-color);
+  border-radius: 10px;
+  animation: AnimationFade 0.2s;
+  z-index: 999;
+}
+.dropdown__item {
+  padding: 12px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--gray-color);
+}
+.dropdown__item:hover {
+  background-color: var(--purple-color);
+  color: var(--secondary-color);
+}
+.dropdown__item:last-child {
+  border-bottom: 0;
+}
+.dropdown__item.active {
+  background-color: var(--purple-color);
+  color: var(--secondary-color);
+}
+/* ========================= Animation =========================*/
+@keyframes AnimationFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes AnimationFadeToTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ========================= Media Query =========================*/
+@media screen and (max-width: 1024px) {
+  .modal__dialog {
+    height: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .modal__body {
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+  .content__image {
+    width: 100%;
+  }
+  .slider {
+    flex-direction: column;
+    height: auto;
+    padding: 16px;
+  }
+  .floating__group {
+    width: 100%;
+  }
+  .float-left {
+    left: 0;
+  }
+  .floating__sns {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .floating__button {
+    bottom: 100px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .grid__content {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+}

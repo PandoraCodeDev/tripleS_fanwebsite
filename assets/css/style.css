@@ -123,51 +123,6 @@ h6 {
   padding-top: 80px;
   padding-bottom: 80px;
 }
-
-/* .album {
-  max-width: 100%;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 5) - 12px);
-  scroll-snap-type: x mandatory;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scrollbar-width: 0;
-  gap: 16px;
-}
-.album::-webkit-scrollbar {
-  display: none;
-}
-.album__name {
-  font-size: clamp(0.5rem, 0.7727rem + 1.1364vw, 1rem);
-}
-.album.dragging {
-  scroll-snap-type: none;
-  scroll-behavior: auto;
-}
-.album.dragging .album__list {
-  cursor: grab;
-  user-select: none;
-}
-.album__list {
-  max-width: 200px;
-  scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  animation: AnimationFadeToTop 1s;
-  gap: 8px;
-}
-.album__cover {
-  height: 200px;
-}
-.cover__image {
-  -webkit-user-drag: none;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  overflow: hidden;
-} */
 .slider__carousel {
   max-width: 100%;
   display: grid;

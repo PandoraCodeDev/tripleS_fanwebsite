@@ -569,9 +569,14 @@ h6 {
     flex-direction: column;
     overflow-y: scroll;
   }
-  
+  .content__image {
+    width: 100%;
+  }
 } */
 @media screen and (max-width: 768px) {
+  .modal__dialog {
+    height: 100%;
+  }
   .modal__body {
     flex-direction: column;
     overflow-y: scroll;

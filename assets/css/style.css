@@ -561,11 +561,16 @@ h6 {
   }
 }
 /* ========================= Media Query =========================*/
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
   .modal__dialog {
     height: 100%;
   }
-}
+  .modal__body {
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+  
+} */
 @media screen and (max-width: 768px) {
   .modal__body {
     flex-direction: column;
